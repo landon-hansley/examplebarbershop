@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Scissors, Clock, MapPin } from 'lucide-react'
-import Hero from '../public/Hero.jpg'
 
 export default function Home() {
   return (
     <div className="relative">
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <Image
-          src={Hero}
+          src='/Hero.jpg'
           alt="Vintage barber shop interior"
           layout="fill"
           objectFit="cover"
