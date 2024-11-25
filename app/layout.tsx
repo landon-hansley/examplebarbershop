@@ -2,7 +2,6 @@ import './globals.css'
 import { Lora, Roboto_Slab } from 'next/font/google'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Image from 'next/image'
 
 const lora = Lora({ 
   subsets: ['latin'],
