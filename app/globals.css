@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-lora: 'Lora', serif;
+  --font-roboto-slab: 'Roboto Slab', serif;
+  --color-blue-dark: #2a4080;
+  --color-blue-medium: #2c3e6e;
+  --color-blue-light: #3a5085;
+  --color-red-dark: #b30000;
+  --color-red-medium: #a52a2a;
+  --color-red-light: #b22222;
+}
+
+body {
+  font-family: var(--font-roboto-slab);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lora);
+  font-weight: 700;
+}
+
+@layer base {
+  body {
+    @apply text-blue-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-sm transition-colors;
+  }
+  .btn-primary {
+    @apply bg-red-800 text-white hover:bg-red-700;
+  }
+}
+
+@layer utilities {
+  .vintage-border {
+    border-image: url('/border-texture.png') 30 stretch;
+  }
+  
+  .barber-pole-bg {
+    background: repeating-linear-gradient(
+      45deg,
+      #ffffff,
+      #ffffff 10px,
+      var(--color-red-medium) 10px,
+      var(--color-red-medium) 20px,
+      var(--color-blue-medium) 20px,
+      var(--color-blue-medium) 30px
+    );
+  }
+}
+
+.vintage-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vintage-filter {
+  filter: sepia(20%) saturate(80%) contrast(1.2);
+}
+
